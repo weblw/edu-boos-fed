@@ -55,7 +55,7 @@ export default Vue.extend({
           // 登陆成功，记录状态，状态需要能够全局访问
           this.$store.commit('setUser', data.content)
           this.$message.success('登陆成功！')
-          this.$router.push(this.$route.query.redirect as string || '/')
+          this.$router.push(this.$route.query.redirect as string || '/menu')
         }
       } catch (err) {
         console.log('登陆失败', err)
